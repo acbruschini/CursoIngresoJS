@@ -3,7 +3,7 @@ function mostrar()
 //tomo la edad  
 
 var edad;
-edad = document.getElementById("edad").value;
+edad = parseInt(document.getElementById("edad").value);
 /*
 //CON EL ELSE
 if (edad >= 13 && edad <= 17) {
