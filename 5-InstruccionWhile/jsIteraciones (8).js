@@ -7,6 +7,24 @@ function mostrar()
 	
 	var respuesta='si';
 
+	while (respuesta == "si") {
+
+		numero = parseInt(prompt ("Coloque el numero"));
+		//contador++;
+		if (numero < 0){
+
+			negativo = negativo * numero;
+
+		} else {
+
+			positivo = positivo + numero;
+
+		}
+
+		respuesta = prompt("Quiere colocar otro numero? Responda si o no");
+		
+
+	}
 
 document.getElementById('suma').value=positivo;
 document.getElementById('producto').value=negativo;
