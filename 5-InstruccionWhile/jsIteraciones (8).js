@@ -1,17 +1,22 @@
-function mostrar()
-{
+function mostrar() {
 
-	var contador=0;
-	var positivo=0;
-	var negativo=1;
-	
-	var respuesta='si';
+	//var contador = 0;
+	var positivo = 0;
+	var negativo = 1;
 
-	while (respuesta == "si") {
+	var respuesta = 'si';
 
-		numero = parseInt(prompt ("Coloque el numero"));
-		//contador++;
-		if (numero < 0){
+	while (respuesta == 'si') {
+
+		numero = parseInt(prompt("Coloque el numero"));
+
+		while (isNaN(numero)) {
+
+			numero = parseInt(prompt("No es un numero por favor coloque el numero"));
+
+		}
+
+		if (numero < 0) {
 
 			negativo = negativo * numero;
 
@@ -22,11 +27,11 @@ function mostrar()
 		}
 
 		respuesta = prompt("Quiere colocar otro numero? Responda si o no");
-		
+		contador++;
 
 	}
 
-document.getElementById('suma').value=positivo;
-document.getElementById('producto').value=negativo;
+	document.getElementById('suma').value = positivo;
+	document.getElementById('producto').value = negativo;
 
 }//FIN DE LA FUNCIÓN
